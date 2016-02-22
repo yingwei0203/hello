@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2015 sp2 (x64) (http://www.altova.com) by Ying Wei (Iowa State University) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="programs">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="program" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Courses">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Course" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Version">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="DualListing">
+																	<xs:complexType>
+																		<xs:attribute name="DualListed" type="xs:boolean" use="optional"/>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="CrossListing">
+																	<xs:complexType>
+																		<xs:attribute name="CrossListed" type="xs:boolean" use="optional"/>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="ContactHrs">
+																	<xs:complexType>
+																		<xs:attribute name="CH1" type="xs:int" use="optional"/>
+																		<xs:attribute name="CH2" type="xs:int" use="optional"/>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="Credit">
+																	<xs:complexType>
+																		<xs:attribute name="CrLow" type="xs:int" use="optional"/>
+																		<xs:attribute name="Diversity" type="xs:boolean" use="optional"/>
+																		<xs:attribute name="IntPers" type="xs:boolean" use="optional"/>
+																		<xs:attribute name="CrMax" type="xs:int" use="optional"/>
+																		<xs:attribute name="CrHigh" type="xs:int" use="optional"/>
+																		<xs:attribute name="GradeType" type="xs:string" use="optional"/>
+																		<xs:attribute name="CrType" type="xs:string" use="optional"/>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="Offering">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="Fall">
+																				<xs:complexType>
+																					<xs:attribute name="YearOfOffer" type="xs:string" use="optional"/>
+																					<xs:attribute name="isTerm" type="xs:boolean" use="optional"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="Spring">
+																				<xs:complexType>
+																					<xs:attribute name="YearOfOffer" type="xs:string"/>
+																					<xs:attribute name="isTerm" type="xs:boolean" use="optional"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element name="Summer">
+																				<xs:complexType>
+																					<xs:attribute name="YearOfOffer" type="xs:string" use="optional"/>
+																					<xs:attribute name="isTerm" type="xs:boolean" use="optional"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+															<xs:attribute name="CatalogYear" type="xs:gYear" use="required"/>
+															<xs:attribute name="MaxHours" type="xs:int" use="optional"/>
+															<xs:attribute name="Experimental" type="xs:boolean" use="required"/>
+															<xs:attribute name="Repeatable" type="xs:boolean" use="optional"/>
+															<xs:attribute name="Status" type="xs:string" use="optional"/>
+															<xs:attribute name="Notes" type="xs:string" use="optional"/>
+															<xs:attribute name="AdminDept" type="xs:string" use="optional"/>
+															<xs:attribute name="PreReq" type="xs:string" use="optional"/>
+															<xs:attribute name="TeachingDept" type="xs:string" use="optional"/>
+															<xs:attribute name="CourseType" type="xs:string" use="optional"/>
+															<xs:attribute name="GraduationReqNote" type="xs:string" use="optional"/>
+															<xs:attribute name="Description" type="xs:string" use="optional"/>
+															<xs:attribute name="LongTitile" type="xs:string" use="optional"/>
+															<xs:attribute name="ShortTitle" type="xs:string" use="optional"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="CourseNum" type="xs:int" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="designator" type="xs:Name" use="required"/>
+						<xs:attribute name="isDepartment" type="xs:boolean" use="optional"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
