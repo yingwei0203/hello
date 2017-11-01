@@ -185,3 +185,4 @@ public class SaxonAdapter extends ClientsFactory {
 		}
 	}
 }
+//test end of file
